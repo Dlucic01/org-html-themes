@@ -1,3 +1,19 @@
+/* Custom scrollbar */
+body::-webkit-scrollbar {
+  width: 12px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: #000000;        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #e6e6e6;    /* color of the scroll thumb */
+}
+
+
+
+
 @import url("https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700");
 @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css");
 
@@ -50,8 +66,8 @@ html{
 }
 
 body{
-    background:#edf0f2;
-    color:#404040;
+    background:#000000;
+    color:#edf0f2;
     font-family:"Lato","proxima-nova","Helvetica Neue",Arial,sans-serif;
     font-weight:normal;
     margin:0;
@@ -59,7 +75,7 @@ body{
 }
 
 #content{
-    background:#fcfcfc;
+    background:#101010;
     margin-left:300px;
     /* margin:auto; */
     max-width:800px;
@@ -77,7 +93,7 @@ b,strong{
     font-weight:bold}
 
 blockquote{
-    background-color: #F0F0F0;
+    background-color: #1c1c1c;
     border-left:5px solid #CCCCCC;
     font-style:italic;
     line-height:24px;
@@ -257,7 +273,7 @@ dl dd{
         background:rgba(0,0,0,0.05)}
 
     #content{
-        background:#fcfcfc}
+        background:#101010}
 }
 
 @media screen and (max-width: 768px){
@@ -278,10 +294,11 @@ dl dd{
         width:100%}
 }
 
+/* TODO Check what this is */
 code{
     background:#fff;
     border:solid 1px #e1e4e5;
-    /* color:#000;  for clickable code */
+    color:#000;  for clickable code 
     font-family:Consolas,"Andale Mono WT","Andale Mono","Lucida Console","Lucida Sans Typewriter","DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono","Nimbus Mono L",Monaco,"Courier New",Courier,monospace;
     font-size:75%;
     max-width:100%;
@@ -296,7 +313,7 @@ code{
     padding:24px;
     padding-top:48px;
     font-weight:500;
-    background:#fff;
+    background:#1c1c1c;
     position:relative}
 
 .codeblock-example:after{
@@ -316,7 +333,7 @@ code{
     border:1px solid #e1e4e5;
     padding:12px;
     overflow-x:auto;
-    background:#fff;
+    background:#1c1c1c;
     margin:1px 0 24px 0}
 
 pre.src{
@@ -332,9 +349,9 @@ pre.src{
 }
 
 .example{
-    background:#f3f6f6;
+    background:#1c1c1c;
     border:1px solid #e1e4e5;
-    color:#404040;
+    color:#edf0f2;
     font-size: 12px;
     line-height: 1.5;
     margin-bottom:24px;
@@ -347,7 +364,7 @@ table{
     border-spacing:0;
     empty-cells:show;
     margin-bottom:24px;
-    border-bottom:1px solid #e1e4e5;
+    border-bottom:1px solid #000000;
 }
 
 td{
@@ -358,14 +375,14 @@ table td,table th{
     margin:0;
     overflow:visible;
     padding:8px 16px;
-    background-color:white;
-    border:1px solid #e1e4e5;
+    background-color:#1c1c1c;
+    border:1px solid #000000;
 }
 
 table thead th{
     font-weight:bold;
-    border-top:3px solid #e1e4e5;
-    border-bottom:1px solid #e1e4e5;
+    border-top:3px solid #000000;
+    border-bottom:1px solid #000000;
 }
 
 table caption{
@@ -375,11 +392,11 @@ table caption{
 }
 
 table tr:nth-child(2n-1) td{
-    background-color:#f3f6f6;
+    background-color:#1c1c1c;
 }
 
 table tr:nth-child(2n) td{
-    background-color:white;
+    background-color:#4a4a4a;
 }
 
 .figure p{
@@ -435,7 +452,7 @@ table tr:nth-child(2n) td{
     }
 
     #toggle-sidebar h2 {
-        background-color:#2980B9;
+        background-color:#1357a6;
         width:100%;
         height:50px;
         left:0;
@@ -682,6 +699,44 @@ hr{
     margin:24px 0;
     padding:0}
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #table-of-contents li{
     list-style:none;
     margin-left: 0px;
@@ -717,7 +772,7 @@ hr{
     padding:0.4045em 2.427em}
 
 #table-of-contents li.current a:hover{
-    background:#d6d6d6}
+    background:#101010}
 
 #table-of-contents li a{
     /* color:#404040; */
@@ -782,23 +837,40 @@ hr{
     overflow-x:hidden;
     overflow-y:scroll;
     height:100%;
-    background:#343131;
+    background:#000000;
     z-index:200;
-    scrollbar-base-color: #1F1D1D;
+   /* scrollbar-base-color: #1F1D1D;
     scrollbar-arrow-color: #b3b3b3;
     scrollbar-shadow-color: #1F1D1D;
     scrollbar-track-color : #343131;
+  */
 }
 
 #table-of-contents h2{
     z-index:200;
-    background-color:#2980B9;
+    background-color:#1357a6;
     text-align:center;
     padding:0.809em;
     display:block;
     color:#fcfcfc;
     font-size: 100%;
     margin-bottom:0.809em}
+
+
+#table-of-contents::-webkit-scrollbar-track {
+  background-color: #000000;
+}
+
+#table-of-contents::-webkit-scrollbar {
+  width: 12px;
+}
+
+#table-of-contents::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+  background-color: #e6e6e6;
+  border: 1px solid #000;
+}
+
 
 ul.nav > li ul {
     display: none;
@@ -921,8 +993,7 @@ footer p{
     left:0;
     width:300px;
     color:#fcfcfc;
-    background:#1f1d1d;
-    border-top:solid 10px #343131;
+    background:#1c1c1c;
     font-family:"Lato","proxima-nova","Helvetica Neue",Arial,sans-serif;
     font-size: 90%;
     z-index:400;
@@ -973,7 +1044,7 @@ footer p{
 
 .verse{
     border-left:5px solid #6AB0DE;
-    background-color: #E7F2FA;
+    background-color: #1c1c1c;
     padding: 6px 20px;
     font-style:italic;
 }
@@ -1037,7 +1108,8 @@ footer p{
     font-size:90%}
 
 span[id*='MathJax-Span']{
-    color:#404040}
+    color:#edf0f2;
+}
 
 .math{
     text-align:center}
@@ -1078,9 +1150,9 @@ h2.footnotes{
 }
 
 .todo{
-    background-color: #f29f97;
+    background-color: #000000;
     padding: 0px 4px;
-    color: #fff;
+    color: #ff0000;
 }
 
 .WAIT, .nilWAIT{
@@ -1088,23 +1160,23 @@ h2.footnotes{
 }
 
 .done{
-    background-color: #6ab0de;
+    background-color: #000000;
     padding: 0px 4px;
-    color: #fff;
+    color: #009fff;
 }
 
 .tag span {
-    background-color: #EDEDED;
-    border: 1px solid #EDEDED;
-    color: #939393;
+    background-color: #1c1c1c;
+    border: 1px solid #EDf0f2;
+    color: #edf0f2;
     cursor: pointer;
     display: block;
     float: right;
     font-size: 80%;
     font-weight: normal;
     margin: 0 3px;
-    padding: 1px 2px;
-    border-radius: 10px;
+    padding: 3px 6px;
+    border-radius: 3px;
 }
 
 .tag .FLAGGED {
